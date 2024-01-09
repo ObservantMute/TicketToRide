@@ -1,3 +1,11 @@
+def main():
+    connections = [csvfile] #dont worry about this
+    posConns = [34]
+    posConnsList = [[0], [1, 47, 69], [61], [31], [73]]
+    path = ['Vancouver', 'Seattle', 'Portland', 'San Francisco', 'Los Angeles', 'El Paso']
+    distance = 16
+    backtrackAndProceedToNextCity(path, distance, posConns, posConnsList, connections)
+
 def backtrackAndProceedToNextCity(path, distance, posConns, posConnsList, connections):
     while True:
         distance -= connections[posConnsList[-1][0]][2]
@@ -18,4 +26,4 @@ def backtrackAndProceedToNextCity(path, distance, posConns, posConnsList, connec
     #return path, distance, posConns, posConnsList
 
 My knowledge of how functions work is that if you pass a variable in through the arguments and change the variable's value, those changes will be reflected in the variable outside the function. 
-path and posConnsList follow this assumption, however distance and posConns do not. Why?
+path and posConnsList follow this assumption, however distance and posConns do not. Why? For example, after the function runs, path and posConnsList are updated as expected, however, posConns reverts to [34] and distance to 16.
