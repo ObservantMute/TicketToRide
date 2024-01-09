@@ -25,5 +25,8 @@ def backtrackAndProceedToNextCity(path, distance, posConns, posConnsList, connec
     posConnsList.append(posConns)
     #return path, distance, posConns, posConnsList
 
+if __name__ == '__main__':
+    main()
+
 My knowledge of how functions work is that if you pass a variable in through the arguments and change the variable's value, those changes will be reflected in the variable outside the function. 
 path and posConnsList follow this assumption, however distance and posConns do not. Why? For example, after the function runs, path and posConnsList are updated as expected, however, posConns reverts to [34] and distance to 16.
