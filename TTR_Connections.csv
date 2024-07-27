@@ -1,0 +1,79 @@
+﻿City 1,City 2,Num Trains,Points
+Vancouver,Seattle,1,1
+Seattle,Portland,1,1
+Omaha,Kansas City,1,1
+Dallas,Houston,1,1
+Nashville,Atlanta,1,1
+Las Vegas,Los Angeles,2,2
+Denver,Santa Fe,2,2
+Santa Fe,El Paso,2,2
+Duluth,Omaha,2,2
+Kansas City,Saint Louis,2,2
+Kansas City,Oklahoma City,2,2
+Oklahoma City,Little Rock,2,2
+Oklahoma City,Dallas,2,2
+Dallas,Little Rock,2,2
+Houston,New Orleans,2,2
+Sault St. Marie,Toronto,2,2
+Chicago,Saint Louis,2,2
+Saint Louis,Nashville,2,2
+Saint Louis,Little Rock,2,2
+Toronto,Pittsburgh,2,2
+Pittsburgh,New York,2,2
+Pittsburgh,Washington,2,2
+Pittsburgh,Raleigh,2,2
+Atlanta,Raleigh,2,2
+Atlanta,Charleston,2,2
+Montreal,Boston,2,2
+Boston,New York,2,2
+New York,Washington,2,2
+Washington,Raleigh,2,2
+Raleigh,Charleston,2,2
+Vancouver,Calgary,3,4
+San Francisco,Los Angeles,3,4
+Helena,Salt Lake City,3,4
+Salt Lake City,Denver,3,4
+Salt Lake City,Las Vegas,3,4
+Los Angeles,Phoenix,3,4
+Phoenix,Santa Fe,3,4
+Phoenix,El Paso,3,4
+Santa Fe,Oklahoma City,3,4
+Duluth,Sault St. Marie,3,4
+Duluth,Chicago,3,4
+Chicago,Pittsburgh,3,4
+Little Rock,Nashville,3,4
+Little Rock,New Orleans,3,4
+Toronto,Montreal,3,4
+Nashville,Raleigh,3,4
+Montreal,New York,3,4
+Seattle,Calgary,4,7
+Calgary,Helena,4,7
+Helena,Winnipeg,4,7
+Helena,Denver,4,7
+Denver,Omaha,4,7
+Denver,Kansas City,4,7
+Denver,Oklahoma City,4,7
+El Paso,Dallas,4,7
+Winnipeg,Duluth,4,7
+Omaha,Chicago,4,7
+Chicago,Toronto,4,7
+Pittsburgh,Nashville,4,7
+New Orleans,Atlanta,4,7
+Charleston,Miami,4,7
+Portland,San Francisco,5,10
+San Francisco,Salt Lake City,5,10
+Helena,Omaha,5,10
+Phoenix,Denver,5,10
+El Paso,Oklahoma City,5,10
+Sault St. Marie,Montreal,5,10
+Saint Louis,Pittsburgh,5,10
+Atlanta,Miami,5,10
+Seattle,Helena,6,15
+Portland,Salt Lake City,6,15
+Calgary,Winnipeg,6,15
+Helena,Duluth,6,15
+Los Angeles,El Paso,6,15
+El Paso,Houston,6,15
+Winnipeg,Sault St. Marie,6,15
+Duluth,Toronto,6,15
+New Orleans,Miami,6,15
