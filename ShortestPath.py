@@ -1,10 +1,13 @@
 #Finding alternate shortest paths of same distance?
+import time
 
 def main():
+    start_time = time.perf_counter()
     connections = []
     extractData(r'C:\Users\willi\OneDrive\Documents\VSCode Projects\Personal Projects\TicketToRide\TTR_Connections.csv', connections)
-    path, distance = shortestPath('Vancouver', 'Miami', connections)
+    path, distance = shortestPath('Helena', 'Little Rock', connections)
     print(path, distance)
+    print("Process finished --- %.7s milliseconds ---" % (1000 * (time.perf_counter() - start_time)))
 
 def extractData(path, outputList):
     with open(path) as file:
@@ -20,7 +23,7 @@ def shortestPath(departure, destination, connections):
     posConnsList = [] #list of lists of  indexes of possible connections to be made from each connecting city; Used while pathfinding
     path = [departure] #Initialize path to sta rt at departure, used while pathfinding
     distance = 0 #distance traveled on current path
-    shortestDistance = 100 #Constant guaranteed to be longer than shortest path
+    shortestDistance = float('inf') #Constant guaranteed to be longer than shortest path
 
     while True:
         path, distance, posConnsList = findRoute(path, distance, posConnsList, destination, connections, shortestDistance)
