@@ -3,7 +3,7 @@
 def main():
     connections = []
     extractData(r'C:\Users\willi\OneDrive\Documents\VSCode Projects\Personal Projects\TicketToRide\TTR_Connections.csv', connections)
-    path, distance = shortestPath('Helena', 'Little Rock', connections)
+    path, distance = shortestPath('Vancouver', 'Miami', connections)
     print(path, distance)
 
 def extractData(path, outputList):
