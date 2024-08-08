@@ -3,8 +3,8 @@
 def main():
     connections = []
     extractData(r'C:\Users\willi\OneDrive\Documents\VSCode Projects\Personal Projects\TicketToRide\TTR_Connections.csv', connections)
-    path = shortestPath('Vancouver', 'Winnipeg', connections)
-    print(path)
+    path, distance = shortestPath('Helena', 'Little Rock', connections)
+    print(path, distance)
 
 def extractData(path, outputList):
     with open(path) as file:
@@ -24,17 +24,18 @@ def shortestPath(departure, destination, connections):
 
     while True:
         path, distance, posConnsList = findRoute(path, distance, posConnsList, destination, connections, shortestDistance)
-        shortestDistance = distance
-        shortestPath = path
+        if(len(posConnsList) != 0): #OPT
+            shortestDistance = distance
+            shortestPath = path.copy()
         
         while((len(posConnsList) > 1 and len(posConnsList[-1]) == 1) or destination in path):
             path, distance, posConnsList = backtrackAndProceedToNextCity(path, distance, posConnsList, connections, shortestDistance) 
             if(destination in path):
                 shortestDistance = distance
-                shortestPath = path
+                shortestPath = path.copy()
         if(len(posConnsList) == 0):
             break
-    return shortestPath 
+    return shortestPath, shortestDistance
 
 def findRoute(path, distance, posConnsList, destination, connections, shortestDistance):
     while not(destination in path):
@@ -58,7 +59,8 @@ def findRoute(path, distance, posConnsList, destination, connections, shortestDi
 
             if(distance > shortestDistance): #if new distance is greater than established shortest path, backtrack
                 path, distance, posConnsList = backtrackAndProceedToNextCity(path, distance, posConnsList, connections, shortestDistance)
-    shortestDistance = distance
+        if(len(posConnsList) == 0 and len(posConns) == 0): #OPT
+            break
     return path, distance, posConnsList
 
 def cityNotInPath(path, connection): #checks if connection causes a loop (going to a city already in the path)
